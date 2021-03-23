@@ -11,5 +11,5 @@ const listItem = ({num, item, price, quantity, actions}) => {
   )
 }
 
-export default listItem
+export default listItem;
 
