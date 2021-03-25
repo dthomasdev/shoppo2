@@ -11,18 +11,17 @@ function App() {
   const [ itemsList , setList ] = useState( [] );
   
   // loads state from local storage
-  // only on app load
+  // only on app load as indicated by empty array
     useEffect(() => {
     const items = localStorage.getItem('items')
     setList(JSON.parse(items));
   }, []);
 
   // useEffect 'observer' for itemsList
-  // updates local storage when a change is detected
+  // updates local storage when a change is detected in the item list
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(itemsList));
   },[itemsList]);
-
 
   // updates state when a new item is added in addForm
   // appends value to current list using spread operator ...
@@ -53,7 +52,6 @@ function App() {
     }).filter((item)=>{
       return item.quantity !== 0
     }))
-
   };
 
   // removeitem function
