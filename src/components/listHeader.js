@@ -3,15 +3,26 @@ import ListItem from './listItem';
 
 const ListHeader = ({ list }) => {
 
-// maps through array and creates a new ListItem per entry
+  function delItem(index){
+    console.log(index)
+  };
+
+// maps through array of values passed in as props and creates a new ListItem per entry
 function myList(){
   return list.map((item, i) => (
-    <ListItem key={i} num={i+1} item={item.item} price={item.price} quantity={item.quantity} actions="delete/edit"/>
+    <ListItem 
+      key={i} 
+      num={i+1} 
+      item={item.item} 
+      price={item.price} 
+      quantity={item.quantity} 
+      delItem={() => delItem(i)} // call del item function using the items index in the array
+    />
   ));
 };
 
   return (
-      <table>
+      <table id = "table">
         <thead>
           <tr>
             <th>No.</th>

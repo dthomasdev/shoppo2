@@ -12,13 +12,13 @@ const { item, price, quantity } = newItem; // destructures item object into vari
     setItem({ item: "", price:"", quantity: "" }) // 'manually' resets state
   };
   
-  //changeHandler, appends new values to existing state
+  //changeHandler, appends new values to existing state in app.js
   function changehandler(e){
     setItem({
       ...newItem,
       [e.target.name] : e.target.value
     })
-  }
+  };
 
   return (
       <form onSubmit={(e)=>submitHandler(e)}>
@@ -34,6 +34,6 @@ const { item, price, quantity } = newItem; // destructures item object into vari
         <button type="submit">Add</button>
       </form>
   )
-}
+};
 
 export default AddForm;

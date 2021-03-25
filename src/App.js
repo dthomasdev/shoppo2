@@ -10,10 +10,15 @@ import AddForm from './components/addForm';
 function App() {
   const [ itemsList , setList ] = useState( [ ] );
 
+  // updates state when a new item is added in addForm
+  // appends value to current list using spread operator ...
   function addNewItem(newItem){
     setList(c => [...c, newItem]);
   };
 
+  // creates a shopping total
+  // maps through the array of items and calclates line total
+  // reduces the resulting array down to a grand total
   function totaller(){
     return(itemsList.map((item) => {
       return item.price * item.quantity

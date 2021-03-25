@@ -1,4 +1,5 @@
-const listItem = ({num, item, price, quantity, actions}) => {
+const listItem = ({num, item, price, quantity, delItem}) => {
+
   return (
    <tr>
      <td>{num}</td> 
@@ -6,7 +7,7 @@ const listItem = ({num, item, price, quantity, actions}) => {
      <td>£{parseFloat(price).toFixed(2)}</td> 
      <td>{quantity}</td> 
      <td>£{parseFloat(quantity * price).toFixed(2)}</td> 
-     <td>{actions}</td> 
+     <td><button onClick = { () => delItem() } >Delete</button></td> 
    </tr>
   )
 }
