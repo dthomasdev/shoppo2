@@ -1,10 +1,10 @@
 //components
 import ListItem from './listItem';
 
-const ListHeader = ({ list }) => {
+const ListHeader = ({ list , removeItem}) => {
 
   function delItem(index){
-    console.log(index)
+    removeItem(index)
   };
 
 // maps through array of values passed in as props and creates a new ListItem per entry

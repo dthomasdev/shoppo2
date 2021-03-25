@@ -16,6 +16,15 @@ function App() {
     setList(c => [...c, newItem]);
   };
 
+  //removeitem function
+  //uses a filter to remove item
+  // from the index in the array
+  function removeItem(i){
+    setList(itemsList.filter((_,index) => {
+      return index !== i
+    }))
+  }
+
   // creates a shopping total
   // maps through the array of items and calclates line total
   // reduces the resulting array down to a grand total
@@ -34,7 +43,7 @@ function App() {
       <pre>{JSON.stringify(itemsList)}</pre> */}
       <AddForm addNewItem = { (newItem) => addNewItem(newItem) } />
       <Header/>
-      <ListHeader list = { itemsList } />
+      <ListHeader list = { itemsList }  removeItem = { (i) => removeItem(i) } />
       <h2>£{totaller()}</h2>
     </div>
   );
