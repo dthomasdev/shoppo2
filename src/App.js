@@ -16,8 +16,8 @@ function App() {
     setList(c => [...c, newItem]);
   };
 
-  //removeitem function
-  //uses a filter to remove item
+  // removeitem function
+  // uses a filter to remove item
   // from the index in the array
   function removeItem(i){
     setList(itemsList.filter((_,index) => {
@@ -25,11 +25,18 @@ function App() {
     }))
   }
 
-  // creates a shopping total
+  // clears the entire list
+  // by resetting state to 
+  // an empty array
+  function clearList(){
+    setList([])
+  };
+
+  // creates a shopping total,
   // maps through the array of items and calclates line total
   // reduces the resulting array down to a grand total
   function totaller(){
-    return(itemsList.map((item) => {
+    return(itemsList.map( item => {
       return item.price * item.quantity
     }).reduce((acc, curr) => {
       return acc + curr
@@ -41,10 +48,11 @@ function App() {
       {/* STATE CHECKERS FOR APP.JS */}
       {/* <pre>{JSON.stringify(itemsList.length)}</pre>
       <pre>{JSON.stringify(itemsList)}</pre> */}
-      <AddForm addNewItem = { (newItem) => addNewItem(newItem) } />
       <Header/>
+      <AddForm addNewItem = { (newItem) => addNewItem(newItem) } />
       <ListHeader list = { itemsList }  removeItem = { (i) => removeItem(i) } />
       <h2>£{totaller()}</h2>
+      <button onClick = {() => clearList()} >Clear</button>
     </div>
   );
 }

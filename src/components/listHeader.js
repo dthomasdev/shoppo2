@@ -22,7 +22,7 @@ function myList(){
 };
 
   return (
-      <table id = "table">
+      <table>
         <thead>
           <tr>
             <th>No.</th>
