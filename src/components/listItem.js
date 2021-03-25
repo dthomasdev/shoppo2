@@ -10,7 +10,7 @@ const listItem = ({num, item, price, quantity, delItem, updateQuant}) => {
      <td>
        <button name = "increment" onClick = { (e) => updateQuant(e.target.name) } >+1</button>
        <button name = "decrement" onClick = { (e) => updateQuant(e.target.name) } >-1</button>
-       <button onClick = { () => delItem() } >Delete</button>
+       <button onClick = { () => delItem() }>Delete</button>
      </td> 
    </tr>
   )

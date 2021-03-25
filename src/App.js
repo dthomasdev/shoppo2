@@ -1,5 +1,5 @@
 //react
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 //components
 import Header from './components/header';
@@ -9,6 +9,12 @@ import AddForm from './components/addForm';
 //render
 function App() {
   const [ itemsList , setList ] = useState( [ ] );
+
+  // useEffect 'observer' for itemsList
+  useEffect(() => {
+   console.log("Watching")
+  }, [itemsList]);
+
 
   // updates state when a new item is added in addForm
   // appends value to current list using spread operator ...
@@ -36,7 +42,6 @@ function App() {
         return item;
       }
     }))
-    
   }
 
   // removeitem function
@@ -69,8 +74,8 @@ function App() {
   return (
     <div className="App">
       {/* STATE CHECKERS FOR APP.JS */}
-      <pre>{JSON.stringify(itemsList.length)}</pre>
-      <pre>{JSON.stringify(itemsList)}</pre>
+      {/* <pre>{JSON.stringify(itemsList.length)}</pre>
+      <pre>{JSON.stringify(itemsList)}</pre> */}
       <Header/>
       <AddForm addNewItem = { (newItem) => addNewItem(newItem) } />
       <ListHeader list = { itemsList }  removeItem = { (i) => removeItem(i) } adjustQuant = { (e, i ,q) => adjustQuant(e, i ,q) } />

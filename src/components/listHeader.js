@@ -3,10 +3,12 @@ import ListItem from './listItem';
 
 const ListHeader = ({ list , removeItem , adjustQuant}) => {
 
+  // part of the event chain for removing items from the list
   function delItem(index){
     removeItem(index)
   };
 
+  // part of the event chain for updating quantities
   function updateQuant(e, i, q){
    adjustQuant(e , i , q)
   }
