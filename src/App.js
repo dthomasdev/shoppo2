@@ -8,13 +8,12 @@ import AddForm from './components/addForm';
 
 //render
 function App() {
-  const [ itemsList , setList ] = useState( [ ] );
-
+  const [ itemsList , setList ] = useState( [] );
+ 
   // useEffect 'observer' for itemsList
   useEffect(() => {
-   console.log("Watching")
+    localStorage.setItem('items', JSON.stringify(itemsList));
   }, [itemsList]);
-
 
   // updates state when a new item is added in addForm
   // appends value to current list using spread operator ...
@@ -24,6 +23,7 @@ function App() {
 
   // increments / decrements quantity
   // maps through the array and adjusts based on parameters
+  // if item goes to zero the item is removed from the list
   function adjustQuant(e , i , q) {
     const quantity = parseInt(q)
 
@@ -41,8 +41,11 @@ function App() {
       } else {
         return item;
       }
+    }).filter((item)=>{
+      return item.quantity !== 0
     }))
-  }
+
+  };
 
   // removeitem function
   // uses a filter to remove item
