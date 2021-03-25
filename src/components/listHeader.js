@@ -1,11 +1,15 @@
 //components
 import ListItem from './listItem';
 
-const ListHeader = ({ list , removeItem}) => {
+const ListHeader = ({ list , removeItem , adjustQuant}) => {
 
   function delItem(index){
     removeItem(index)
   };
+
+  function updateQuant(e, i, q){
+   adjustQuant(e , i , q)
+  }
 
 // maps through array of values passed in as props and creates a new ListItem per entry
 function myList(){
@@ -17,6 +21,7 @@ function myList(){
       price={item.price} 
       quantity={item.quantity} 
       delItem={() => delItem(i)} // call del item function using the items index in the array
+      updateQuant = {(e) => updateQuant(e, i, item.quantity)}
     />
   ));
 };

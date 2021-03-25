@@ -16,6 +16,29 @@ function App() {
     setList(c => [...c, newItem]);
   };
 
+  // increments / decrements quantity
+  // maps through the array and adjusts based on parameters
+  function adjustQuant(e , i , q) {
+    const quantity = parseInt(q)
+
+    setList(itemsList.map((item, index) => {
+      if(i === index && e === 'increment'){
+        return {
+          ...item,
+          quantity : quantity+1
+        }
+      } else if(i === index && e === 'decrement') {
+        return {
+          ...item,
+          quantity : quantity-1
+        }
+      } else {
+        return item;
+      }
+    }))
+    
+  }
+
   // removeitem function
   // uses a filter to remove item
   // from the index in the array
@@ -46,11 +69,11 @@ function App() {
   return (
     <div className="App">
       {/* STATE CHECKERS FOR APP.JS */}
-      {/* <pre>{JSON.stringify(itemsList.length)}</pre>
-      <pre>{JSON.stringify(itemsList)}</pre> */}
+      <pre>{JSON.stringify(itemsList.length)}</pre>
+      <pre>{JSON.stringify(itemsList)}</pre>
       <Header/>
       <AddForm addNewItem = { (newItem) => addNewItem(newItem) } />
-      <ListHeader list = { itemsList }  removeItem = { (i) => removeItem(i) } />
+      <ListHeader list = { itemsList }  removeItem = { (i) => removeItem(i) } adjustQuant = { (e, i ,q) => adjustQuant(e, i ,q) } />
       <h2>£{totaller()}</h2>
       <button onClick = {() => clearList()} >Clear</button>
     </div>
