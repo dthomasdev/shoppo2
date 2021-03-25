@@ -9,11 +9,20 @@ import AddForm from './components/addForm';
 //render
 function App() {
   const [ itemsList , setList ] = useState( [] );
- 
+  
+  // loads state from local storage
+  // only on app load
+    useEffect(() => {
+    const items = localStorage.getItem('items')
+    setList(JSON.parse(items));
+  }, []);
+
   // useEffect 'observer' for itemsList
+  // updates local storage when a change is detected
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(itemsList));
-  }, [itemsList]);
+  },[itemsList]);
+
 
   // updates state when a new item is added in addForm
   // appends value to current list using spread operator ...
