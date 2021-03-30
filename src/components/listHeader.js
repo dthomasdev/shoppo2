@@ -29,7 +29,7 @@ function myList(){
 };
 
   return (
-      <table>
+      <table className = "list-header">
         <thead>
           <tr>
             <th>No.</th>

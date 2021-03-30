@@ -6,6 +6,9 @@ import Header from './components/header';
 import ListHeader from './components/listHeader';
 import AddForm from './components/addForm';
 
+//styles
+import './scss/main.scss';
+
 //render
 function App() {
   const [ itemsList , setList ] = useState( [] );
@@ -82,7 +85,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       {/* STATE CHECKERS FOR APP.JS */}
       {/* <pre>{JSON.stringify(itemsList.length)}</pre>
       <pre>{JSON.stringify(itemsList)}</pre> */}
