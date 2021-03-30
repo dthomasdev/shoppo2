@@ -1,7 +1,7 @@
 const listItem = ({num, item, price, quantity, delItem, updateQuant}) => {
 
   return (
-   <tr>
+   <tr className = "list-item">
      <td>{num}</td> 
      <td>{item}</td> 
      <td>£{parseFloat(price).toFixed(2)}</td> 

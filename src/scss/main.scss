@@ -1,1 +1,21 @@
+.list-header {
+  min-width: 80%;
+  border-collapse: collapse;
 
+  th {
+    border-bottom: 1px solid black;
+  }
+}
+
+.list-item {
+  height: 1.2rem;
+
+  td {
+    text-align: center;
+    padding: 0.25rem 0;
+  }
+}
+
+.list-item:hover {
+  background: #f5f5f5;
+}
