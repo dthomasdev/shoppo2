@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/shoppolisto2/static/css/main.65b8ad41.chunk.css",
-    "main.js": "/shoppolisto2/static/js/main.58083294.chunk.js",
-    "main.js.map": "/shoppolisto2/static/js/main.58083294.chunk.js.map",
-    "runtime-main.js": "/shoppolisto2/static/js/runtime-main.1f3bef41.js",
-    "runtime-main.js.map": "/shoppolisto2/static/js/runtime-main.1f3bef41.js.map",
-    "static/js/2.407d6b83.chunk.js": "/shoppolisto2/static/js/2.407d6b83.chunk.js",
-    "static/js/2.407d6b83.chunk.js.map": "/shoppolisto2/static/js/2.407d6b83.chunk.js.map",
-    "index.html": "/shoppolisto2/index.html",
-    "static/css/main.65b8ad41.chunk.css.map": "/shoppolisto2/static/css/main.65b8ad41.chunk.css.map",
-    "static/js/2.407d6b83.chunk.js.LICENSE.txt": "/shoppolisto2/static/js/2.407d6b83.chunk.js.LICENSE.txt"
+    "main.css": "/shoppo2/static/css/main.65b8ad41.chunk.css",
+    "main.js": "/shoppo2/static/js/main.58083294.chunk.js",
+    "main.js.map": "/shoppo2/static/js/main.58083294.chunk.js.map",
+    "runtime-main.js": "/shoppo2/static/js/runtime-main.12b3c642.js",
+    "runtime-main.js.map": "/shoppo2/static/js/runtime-main.12b3c642.js.map",
+    "static/js/2.407d6b83.chunk.js": "/shoppo2/static/js/2.407d6b83.chunk.js",
+    "static/js/2.407d6b83.chunk.js.map": "/shoppo2/static/js/2.407d6b83.chunk.js.map",
+    "index.html": "/shoppo2/index.html",
+    "static/css/main.65b8ad41.chunk.css.map": "/shoppo2/static/css/main.65b8ad41.chunk.css.map",
+    "static/js/2.407d6b83.chunk.js.LICENSE.txt": "/shoppo2/static/js/2.407d6b83.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1f3bef41.js",
+    "static/js/runtime-main.12b3c642.js",
     "static/js/2.407d6b83.chunk.js",
     "static/css/main.65b8ad41.chunk.css",
     "static/js/main.58083294.chunk.js"
