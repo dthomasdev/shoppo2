@@ -21,17 +21,17 @@ const { item, price, quantity } = newItem; // destructures item object into vari
   };
 
   return (
-      <form onSubmit={(e)=>submitHandler(e)}>
+      <form id = "item-form" onSubmit={(e)=>submitHandler(e)}>
         <label htmlFor="item">Item</label>
         <input type="text" id="item" name="item" value = {item} onChange={e => changehandler(e)}/>
-        <br/>
+        
         <label htmlFor="price">Price</label>
         <input type="text" id="price" name="price" value = {price} onChange={e => changehandler(e)}/>
-        <br/>
+        
         <label htmlFor="quantity">Quantity</label>
         <input type="text" id="quantity" name="quantity" value = {quantity} onChange={e => changehandler(e)}/>
-        <br/>
-        <button type="submit">Add</button>
+        
+        <button className="btn submit" type="submit">Add Item</button>
       </form>
   )
 };

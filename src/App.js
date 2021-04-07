@@ -86,14 +86,13 @@ function App() {
 
   return (
     <div className="app">
-      {/* STATE CHECKERS FOR APP.JS */}
-      {/* <pre>{JSON.stringify(itemsList.length)}</pre>
-      <pre>{JSON.stringify(itemsList)}</pre> */}
-      <Header/>
-      <AddForm addNewItem = { (newItem) => addNewItem(newItem) } />
-      <ListHeader list = { itemsList }  removeItem = { (i) => removeItem(i) } adjustQuant = { (e, i ,q) => adjustQuant(e, i ,q) } />
-      <h2>£{totaller()}</h2>
-      <button onClick = {() => clearList()} >Clear</button>
+        <Header/>
+        <AddForm addNewItem = { (newItem) => addNewItem(newItem) } />
+        <ListHeader list = { itemsList }  removeItem = { (i) => removeItem(i) } adjustQuant = { (e, i ,q) => adjustQuant(e, i ,q) } />
+      <div className="shop-total">
+        <p>Shop Total</p><h2>£{totaller()}</h2>
+        <button onClick = {() => clearList()} >Clear List</button>
+      </div>
     </div>
   );
 }
