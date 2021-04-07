@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <h1>Shopping list</h1>
+    <h1 id="logo">Shoppolisto!</h1>
   )
 }
 

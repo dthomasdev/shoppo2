@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 $border: #f66696;
 $base: #f3f3f3;
 $shadow: 0 5px 20px
@@ -6,6 +8,7 @@ $shadow: 0 5px 20px
     $alpha: 0.4,
   );
 $font-stack: Arial, Helvetica, sans-serif;
+$font-logo: "Lobster", cursive;
 
 * {
   box-sizing: border-box;
@@ -14,19 +17,31 @@ $font-stack: Arial, Helvetica, sans-serif;
 }
 
 body {
+  height: 100vh;
+  width: 100%;
   background-color: $base;
   font-family: $font-stack;
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  font-family: $font-logo;
+  font-size: 3em;
+  color: $border;
+  -webkit-text-stroke: 0.1px #555;
 }
 
 .app {
   background-color: #fff;
-  width: 600px;
-  max-width: 75%;
+  min-width: 520px;
+  width: 70%;
   border: 4px solid $border;
   border-radius: 1rem;
   padding: 0.8rem;
-  margin: 0 auto;
+
   box-shadow: $shadow;
 }
 
@@ -35,6 +50,8 @@ body {
   flex-direction: column;
 
   input {
+    min-width: none;
+    max-width: 50ch;
     height: 1.6rem;
     border: 2px silver solid;
     border-radius: 1em;
@@ -86,11 +103,19 @@ body {
 }
 
 .item-btn {
-  width: 20px;
-  height: 20px;
+  width: 3ch;
+  height: 3ch;
+  border: 2px silver solid;
   border-radius: 50%;
+  margin: 0 0.125rem;
+}
 
-  .add {
-    color: chartreuse;
-  }
+.add:hover {
+  background-color: #7cff25;
+}
+.minus:hover {
+  background-color: #ffc425;
+}
+.delete:hover {
+  background-color: #ff6666;
 }
