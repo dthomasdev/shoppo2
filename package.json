@@ -2,7 +2,7 @@
   "name": "shoppolisto2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://deltadesign.github.io/shoppolisto2",
+  "homepage": "https://deltadesign.github.io/shoppo2",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
